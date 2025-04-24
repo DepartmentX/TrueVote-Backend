@@ -1,0 +1,8 @@
+uvicorn
+fastapi
+pydantic
+xgboost
+pandas
+joblib
+scikit-learn
+pycryptodome
