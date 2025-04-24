@@ -4,6 +4,7 @@ from xgboost import XGBClassifier
 import pandas as pd
 import os
 from Crypto.Hash import keccak
+from schema import ElectionFraudDetectionRequest
 
 iso_foret_model = joblib.load('../model/isolation_forest_model.pkl')
 # logistic_regression_model = LogisticRegression()     # need to load the actual model
@@ -17,21 +18,23 @@ def hash_address(address):
 
 
 def pre_process_data(data):
-    pre_process_data = data.copy()
+    pre_process_data = data.copy().dict(by_alias=True)
     pre_process_data['Address'] = hash_address(pre_process_data['Address'])
-    pre_process_data = pd.DataFrame(pre_process_data, index=[0])    
+    pre_process_data = pd.DataFrame([pre_process_data])
     return pre_process_data
 
 
 def stacked_model_predict(data):
     pre_processed_data = pre_process_data(data)
+    print(pre_processed_data.columns)
+
     if not data:
         raise ValueError("No data provided for prediction.")    
     iso_forest_preds = iso_foret_model.predict(pre_processed_data)
     # logistic_regression_preds = logistic_regression_model.predict(data)
     
     meta_dataset = pd.DataFrame({
-        'Address': data['Address'],
+        'Address': data.Address,
         'Isolation_Forest_Prediction': iso_forest_preds[0],
         # 'Logistic_Regression_Prediction': logistic_regression_preds['FLAG']
     }, index=[0]).to_numpy()
@@ -41,7 +44,7 @@ def stacked_model_predict(data):
     is_fraud = iso_forest_preds  # Placeholder for the actual meta model prediction, need to update
 
     if is_fraud[0] == 1:
-        return {'Address': data['Address'], 'is_fraud': True}
-    return {'Address': data['Address'], 'is_fraud': False}
+        return {'Address': data.Address, 'is_fraud': True}
+    return {'Address': data.Address, 'is_fraud': False}
 
 
