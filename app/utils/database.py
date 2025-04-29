@@ -1,12 +1,17 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
+from dotenv import load_dotenv
+import os
 
-# Replace with your actual DB credentials
-DB_USER = "avnadmin"
-DB_PASSWORD = "AVNS_sscUzfV7fnGG1NSIKOq"
-DB_HOST = "mysql-se-nimeshhiruna.l.aivencloud.com"
-DB_PORT = "24099"
-DB_NAME = "defaultdb"
+# Load environment variables from .env file
+load_dotenv()
+
+# Get database credentials from environment variables
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_NAME = os.getenv("DB_NAME")
 
 DATABASE_URL = f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
