@@ -25,9 +25,6 @@ data_dict = {
   "Liveness Score of The Face": 0.93
 }
 
-data = ElectionFraudDetectionRequest(**data_dict)
-
-
     
 from fastapi.testclient import TestClient
 
