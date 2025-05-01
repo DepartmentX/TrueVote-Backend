@@ -1,34 +1,30 @@
 from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from schema import ElectionFraudDetectionResponse, ElectionFraudDetectionRequest
 import pandas as pd
 from model import stacked_model_predict
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Or restrict: ["http://localhost:3000"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.post("/validate_vote/", response_model=ElectionFraudDetectionResponse)
 def validate_vote(data: ElectionFraudDetectionRequest):
-    fraud_pred = stacked_model_predict(data)
-    if fraud_pred:
-        return ElectionFraudDetectionResponse(Address=fraud_pred['Address'], is_fraud=fraud_pred['is_fraud'])
-    else:
-        raise ValueError("Invalid data format or prediction failed.")
-    
-
-# Test the API endpoint
-
-data_dict = {
-  "Address": "0x3f5CE5FBFe3E9af3971dD833D26BA9b5C936f0bE",
-  "Time Diff between first and last (Mins)": 12.0,
-  "Face Attempts": 2,
-  "Detected As a Robot At Least Once": 0,
-  "Face Match Percentage": 94.2,
-  "Liveness Score of The Face": 0.93
-}
-
-    
-from fastapi.testclient import TestClient
-
-client = TestClient(app)
-response = client.post("/validate_vote/", json=data_dict)
-print(response.json())
-
+    try:
+        fraud_pred = stacked_model_predict(data)
+        if fraud_pred:
+            return ElectionFraudDetectionResponse(
+                Address=fraud_pred['Address'],
+                is_fraud=fraud_pred['is_fraud']
+            )
+        else:
+            raise HTTPException(status_code=400, detail="Prediction failed.")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
