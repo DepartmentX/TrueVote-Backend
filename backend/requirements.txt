@@ -7,3 +7,6 @@ joblib
 scikit-learn
 pycryptodome
 httpx
+matplotlib
+numpy
+catboost
