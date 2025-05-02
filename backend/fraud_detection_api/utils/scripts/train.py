@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from joblib import dump
 
 # Load processed data
-train_data = pd.read_csv('preprocessed_train_data.csv')
+train_data = pd.read_csv('../datasets/preprocessed_train_data.csv')
 X_train = train_data[['fraud_probability', 'is_anomaly']]
 y_train = train_data['is_fraud']
 
@@ -30,7 +30,7 @@ models = {
 }
 
 # Train and save models
-with open('training_log.txt', 'w') as log:
+with open('../performance/training_log.txt', 'w') as log:
     for name, model in models.items():
         log.write(f"\n=== Training {name} ===\n")
         

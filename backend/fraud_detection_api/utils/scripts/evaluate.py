@@ -9,7 +9,7 @@ from sklearn.metrics import (
 import matplotlib.pyplot as plt
 
 # Load test data
-test_data = pd.read_csv('preprocessed_test_data.csv')
+test_data = pd.read_csv('../datasets/preprocessed_test_data.csv')
 X_test = test_data[['fraud_probability', 'is_anomaly']]
 y_test = test_data['is_fraud']
 
@@ -17,9 +17,9 @@ y_test = test_data['is_fraud']
 results = {}
 
 # Evaluate each model
-with open('model_performance_report.txt', 'w') as report:
+with open('../performance/model_performance_report.txt', 'w') as report:
     for model_name in ['xgb', 'catboost', 'random_forest']:
-        model = load(f'model_{model_name}.joblib')
+        model = load(f'../../model/model_{model_name}.joblib')
         y_pred = model.predict(X_test)
         y_proba = model.predict_proba(X_test)[:, 1]
         
@@ -45,7 +45,7 @@ plt.xlabel('Recall')
 plt.ylabel('Precision')
 plt.title('Precision-Recall Curve Comparison')
 plt.legend()
-plt.savefig('pr_curve_comparison.png')
+plt.savefig('../performance/pr_curve_comparison.png')
 plt.close()
 
 print("Evaluation completed. Results saved in model_performance_report.txt")

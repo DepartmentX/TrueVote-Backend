@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from joblib import dump
 
 # Load and rename columns
-df = pd.read_csv('meta_model_train_dataset.csv').rename(columns={
+df = pd.read_csv('../datasets/meta_model_train_dataset.csv').rename(columns={
     'Anomaly': 'is_anomaly',
     'FLAG': 'is_fraud'
 })
@@ -35,15 +35,15 @@ X_test_scaled = scaler.transform(X_test)
 pd.concat([
     pd.DataFrame(X_train_scaled, columns=X.columns),
     y_train.reset_index(drop=True)
-], axis=1).to_csv('preprocessed_train_data.csv', index=False)
+], axis=1).to_csv('../datasets/preprocessed_train_data.csv', index=False)
 
 pd.concat([
     pd.DataFrame(X_test_scaled, columns=X.columns),
     y_test.reset_index(drop=True)
-], axis=1).to_csv('preprocessed_test_data.csv', index=False)
+], axis=1).to_csv('../datasets/preprocessed_test_data.csv', index=False)
 
 # Save scaler
-dump(scaler, 'feature_scaler.joblib')
+dump(scaler, '../feature_scaler.joblib')
 
 print("\nPreprocessing completed:")
 print(f"- Training samples: {len(X_train)}")
