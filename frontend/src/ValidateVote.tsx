@@ -21,11 +21,11 @@ function ValidateVote() {
   const sendVoteData = async () => {
     const data: VoteData = {
       Address: "0x3f5CE5FBFe3E9af3971dD833D26BA9b5C936f0bE",
-      "Time Diff between first and last (Mins)": 12.0,
-      "Face Attempts": 2,
-      "Detected As a Robot At Least Once": 0,
-      "Face Match Percentage": 94.2,
-      "Liveness Score of The Face": 0.93,
+      "Time Diff between first and last (Mins)": 0.0,
+      "Face Attempts": 1,
+      "Detected As a Robot At Least Once": 1,
+      "Face Match Percentage": 51.824401,
+      "Liveness Score of The Face": 58.39,
     };
 
     try {
