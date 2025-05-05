@@ -13,7 +13,8 @@ class User(Base):
     email = Column(String(100), unique=True, nullable=False, index=True)
     
     # Biometric data stored as binary
-    biometric_data = Column(LargeBinary, nullable=False)
+    biometric_image_url = Column(String(100), nullable=True)
+
 
     def __repr__(self):
         return f"<User(wallet_address='{self.wallet_address}', email='{self.email}')>" 
