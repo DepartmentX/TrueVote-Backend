@@ -10,11 +10,11 @@ cd ML-Team</code></pre>
     </li>
     <li><strong>Set up the environment:</strong>
       <p>Ensure you have Python 3.7 or higher installed. Create a virtual environment and install dependencies:</p>
-      <pre><code>python -m venv venv
+      <pre><code>cd backend/fraud_detection_api
+python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt</code></pre>
     </li>
-   ]
   </ol>
 
  
