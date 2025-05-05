@@ -35,6 +35,10 @@ with open('../performance/model_performance_report.txt', 'w') as report:
         report.write(f"ROC-AUC: {results[model_name]['roc_auc']:.4f}\n\n")
         report.write("Classification Report:\n")
         report.write(results[model_name]['classification_report'])
+
+        report.write("\nConfusion Matrix:\n")
+        cm = confusion_matrix(y_test, y_pred)
+        report.write(f"{cm}\n")
         
         # Plot PR curve
         precision, recall, _ = precision_recall_curve(y_test, y_proba)
