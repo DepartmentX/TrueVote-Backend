@@ -10,3 +10,6 @@ httpx
 matplotlib
 numpy
 catboost
+faker
+pytest
+requests
