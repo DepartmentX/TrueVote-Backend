@@ -1,0 +1,50 @@
+
+Test case 1:
+Ethereum Address: 0x7D004f244Ffc5E3A4E24df612643EcbaF7D71cAa
+Hashed Address: 0.7200170818880332
+Test passed.
+
+Test case 2:
+Ethereum Address: 0xF91a93A6EeBBcD48638DBDFB0BE0c7aAA2f608C8
+Hashed Address: 0.8159351635127257
+Test passed.
+
+Test case 3:
+Ethereum Address: 0xCE1D08dBc41729b277bEB2d5BFE9b4ABA634fcF2
+Hashed Address: 0.6994417714264904
+Test passed.
+
+Test case 4:
+Ethereum Address: 0xDE66eFbce2DeEdFFDAc9Ff9FEF655A8B02A1C651
+Hashed Address: 0.9055489071959549
+Test passed.
+
+Test case 5:
+Ethereum Address: 0xEd8A0DA9962C9E72e7E9e2af3FB68E8B9Afc941a
+Hashed Address: 0.1085108938731362
+Test passed.
+
+Test case 6:
+Ethereum Address: 0x4664dECA6EF91EbC8320FCadFD3fB5F5EFb3C16a
+Hashed Address: 0.10286097015486408
+Test passed.
+
+Test case 7:
+Ethereum Address: 0xB0B1D30c5a0Aa48E394FDBD4de1DC158C07df2e7
+Hashed Address: 0.9763035550296141
+Test passed.
+
+Test case 8:
+Ethereum Address: 0x9DbD4fD7B87481Bd6C74cdD90f446afdfb6dFc86
+Hashed Address: 0.47146518500914336
+Test passed.
+
+Test case 9:
+Ethereum Address: 0xd40A88ef1c72ED98cA75CbB0fBdd329692b68557
+Hashed Address: 0.9640462040911686
+Test passed.
+
+Test case 10:
+Ethereum Address: 0xc0fD0eadD22b3E0Ba3acEF421c2F9Da740cB5594
+Hashed Address: 0.8435461324813256
+Test passed.
