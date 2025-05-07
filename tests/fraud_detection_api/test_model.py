@@ -9,11 +9,11 @@ from sklearn.metrics import (
 import matplotlib.pyplot as plt
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'api')))
-from model import stacked_model_predict
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from app.utils.model import stacked_model_predict
 
 # Load test data
-test_data = pd.read_csv('../utils/datasets/test_data.csv')
+test_data = pd.read_csv('../../app/utils/datasets/test_data.csv')
 X_test = test_data.drop(columns=['is_fraud'])
 y_test = test_data['is_fraud']
 
@@ -21,7 +21,7 @@ y_test = test_data['is_fraud']
 results = {}
 
 # Evaluate each model
-with open('../utils/performance/model_test_report.txt', 'w') as report:
+with open('../../app/utils/performance/model_test_report.txt', 'w') as report:
     y_pred = stacked_model_predict(X_test)
     
     # Store metrics
@@ -51,7 +51,7 @@ plt.xlabel('Recall')
 plt.ylabel('Precision')
 plt.title('Precision-Recall Curve Comparison')
 plt.legend()
-plt.savefig('../utils/performance/pr_curve_test.png')
+plt.savefig('../../app/utils/performance/pr_curve_test.png')
 plt.close()
 
 print("Evaluation completed. Results saved in model_performance_report.txt")

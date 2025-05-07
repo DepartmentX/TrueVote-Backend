@@ -3,16 +3,15 @@ import os
 import sys
 import random
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'api')))
-
-from model import hash_address
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from app.utils.model import hash_address
 
 def generate_eth_address():
     return "0x" + ''.join(random.choices('0123456789abcdefABCDEF', k=40))
 
 @pytest.mark.parametrize("i", range(10))  # Run 10 tests with different data
 def test_hash_address_function(i):
-    log_file = "../utils/performance/test_hash_address_results.txt"
+    log_file = "../../app/utils/performance/test_hash_address_results.txt"
     with open(log_file, "a") as log:
         eth_address = generate_eth_address()
 

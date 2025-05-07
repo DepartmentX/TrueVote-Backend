@@ -34,7 +34,7 @@ def test_validate_vote_endpoint(i):
 
     test_status = "PASSED" if response.status_code == 200 and "Address" in data and "is_fraud" in data and isinstance(data["is_fraud"], int) and data["Address"].startswith("0x") else "FAILED"
     
-    with open("../utils/performance/endpoint_test_results.txt", "a") as file:
+    with open("../../app/utils/performance/endpoint_test_results.txt", "a") as file:
         file.write(f"Test {i+1}:\n")
         file.write(f"Payload: {payload}\n")
         file.write(f"Response: {response_data}\n")

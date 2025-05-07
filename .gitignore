@@ -6,6 +6,9 @@ ENV/
 _venv/
 # Python bytecode
 __pycache__/
+tests/__pycache__/
+utils/scripts/__pycache__/
+tests/.pytest_cache
 *.py[cod]
 *$py.class
 

@@ -6,9 +6,9 @@ import pandas as pd
 import os
 from Crypto.Hash import keccak
 
-iso_foret_model = joblib.load('../model/isolation_forest_model.pkl')
-logistic_regression_model = joblib.load('../model/logistic_regression_model.pkl')
-meta_model = joblib.load('../model/model_xgb.joblib')
+iso_foret_model = joblib.load('./models/isolation_forest_model.pkl')    # Use ../../models/isolation_forest_model.pkl when doing unit tests
+logistic_regression_model = joblib.load('./models/logistic_regression_model.pkl')    # Use ../../models/logistic_regression_model.pkl when doing unit tests
+meta_model = joblib.load('./models/model_xgb.joblib')     # Use ../../models/model_xgb.joblib when doing unit tests
 
 
 
@@ -52,7 +52,7 @@ def pre_process_data(data):
         print("Error during address hashing:", e)
         raise
 
-    robust_scaler_path = '../utils/robust_scaler.joblib'  
+    robust_scaler_path = '../../app/utils/feature_scalers/robust_scaler.joblib'  
     robust_scaler = joblib.load(robust_scaler_path)
     
     try:
@@ -67,7 +67,7 @@ def pre_process_data(data):
     return pre_process_data
 
 def scale_data(data):
-    scaler = joblib.load('../utils/feature_scaler.joblib')
+    scaler = joblib.load('../../app/utils/feature_scalers/feature_scaler.joblib')
     scaled_data = scaler.transform(data)
     return scaled_data
 

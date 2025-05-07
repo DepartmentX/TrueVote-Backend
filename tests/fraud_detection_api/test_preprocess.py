@@ -4,9 +4,9 @@ import sys
 import pandas as pd
 import random
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'api')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-from model import stacked_model_predict
+from app.utils.model import pre_process_data
 
 def extract_input_and_output(row):
     features = pd.DataFrame([{
@@ -44,10 +44,6 @@ def generate_row():
 
     is_fraud = 1 if score >= 3 else 0
 
-    # # Add 5% noise
-    # if random.random() < 0.05:
-    #     is_fraud = 1 - is_fraud
-
     return {
         "Address": generate_eth_address(),
         "Time Diff between first and last (Mins)": time_diff,
@@ -59,8 +55,8 @@ def generate_row():
     }
 
 @pytest.mark.parametrize("i", range(10))  # Run 10 tests with different data
-def test_generated_rows(i):
-    log_file = "../utils/performance/test_predict_results.txt"
+def test_preprocess_function(i):
+    log_file = "../../app/utils/performance/test_preprocess_results.txt"
     with open(log_file, "a") as log:
         row = generate_row()
         features, output = extract_input_and_output(row)
@@ -76,9 +72,10 @@ def test_generated_rows(i):
             assert isinstance(features, pd.DataFrame), "Features is not a DataFrame"
             assert features.shape == (1, 6), f"Expected features shape (1,6), got {features.shape}"
 
-            prediction = stacked_model_predict(features)['is_fraud']
-            log.write(f"Prediction: {prediction}\n")
-            assert prediction in [0, 1], f"Prediction should be 0 or 1, but got {prediction}"
+            preprocessed_features = pre_process_data(features)
+            log.write(f"Preprocessed Features: {preprocessed_features}\n")
+            assert isinstance(preprocessed_features, pd.DataFrame), "Preprocessed features is not a DataFrame"
+            # Add additional checks for the structure or content of preprocessed_features if needed
 
             log.write("Test passed.\n")
         except AssertionError as e:
