@@ -52,7 +52,7 @@ def pre_process_data(data):
         print("Error during address hashing:", e)
         raise
 
-    robust_scaler_path = '../../app/utils/feature_scalers/robust_scaler.joblib'  
+    robust_scaler_path = './app/utils/feature_scalers/robust_scaler.joblib'      # Use ../../app/utils/feature_scalers/robust_scaler.joblib when doing unit tests
     robust_scaler = joblib.load(robust_scaler_path)
     
     try:
@@ -67,7 +67,7 @@ def pre_process_data(data):
     return pre_process_data
 
 def scale_data(data):
-    scaler = joblib.load('../../app/utils/feature_scalers/feature_scaler.joblib')
+    scaler = joblib.load('./app/utils/feature_scalers/feature_scaler.joblib')      # Use ../../app/utils/feature_scalers/feature_scaler.joblib when doing unit tests
     scaled_data = scaler.transform(data)
     return scaled_data
 
