@@ -174,3 +174,7 @@ def compare_faces(img_path1, img_path2, threshold=0.6):
             'is_match': False,
             'error': f"Error during face comparison: {str(e)}"
         }
+    
+
+async def get_user_by_wallet(db: Session, wallet_address: str) -> Optional[User]:
+    return db.query(User).filter(User.wallet_address == wallet_address).first()
