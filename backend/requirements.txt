@@ -1,0 +1,16 @@
+uvicorn
+fastapi
+pydantic
+xgboost
+pandas
+joblib
+scikit-learn
+pycryptodome
+httpx
+matplotlib
+numpy
+catboost
+faker
+pytest
+requests
+dotenv

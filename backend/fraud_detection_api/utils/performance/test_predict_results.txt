@@ -1,0 +1,100 @@
+
+Test case 1:
+Row: {'Address': '0xad314A21EbBaB0a1bEf7Cc4A2FeDc18Bf4fa1dde', 'Time Diff between first and last (Mins)': 52.3, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 47.2, 'Liveness Score of The Face': 48.5, 'is_fraud': 1}
+Features:                                       Address  ...  Liveness Score of The Face
+0  0xad314A21EbBaB0a1bEf7Cc4A2FeDc18Bf4fa1dde  ...                        48.5
+
+[1 rows x 6 columns]
+Expected output: 1
+Prediction: [1]
+Test passed.
+
+Test case 2:
+Row: {'Address': '0x8aca85d5B000ef6a5dA4b7AAebC3c3Fd6Cdabe02', 'Time Diff between first and last (Mins)': 31.8, 'Face Attempts': 2, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 38.0, 'Liveness Score of The Face': 30.7, 'is_fraud': 1}
+Features:                                       Address  ...  Liveness Score of The Face
+0  0x8aca85d5B000ef6a5dA4b7AAebC3c3Fd6Cdabe02  ...                        30.7
+
+[1 rows x 6 columns]
+Expected output: 1
+Prediction: [1]
+Test passed.
+
+Test case 3:
+Row: {'Address': '0xd2D533A2cC18A428Da1fdab417dE1Cd3dd7F4AC8', 'Time Diff between first and last (Mins)': 53.9, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 84.3, 'Liveness Score of The Face': 70.7, 'is_fraud': 0}
+Features:                                       Address  ...  Liveness Score of The Face
+0  0xd2D533A2cC18A428Da1fdab417dE1Cd3dd7F4AC8  ...                        70.7
+
+[1 rows x 6 columns]
+Expected output: 0
+Prediction: [0]
+Test passed.
+
+Test case 4:
+Row: {'Address': '0xA98a6FbdecE4697Bd5DAfE53fca3C9EeD85cB8b5', 'Time Diff between first and last (Mins)': 35.2, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 73.5, 'Liveness Score of The Face': 38.6, 'is_fraud': 0}
+Features:                                       Address  ...  Liveness Score of The Face
+0  0xA98a6FbdecE4697Bd5DAfE53fca3C9EeD85cB8b5  ...                        38.6
+
+[1 rows x 6 columns]
+Expected output: 0
+Prediction: [1]
+Test passed.
+
+Test case 5:
+Row: {'Address': '0xeBd824D42dB6d0AD3fEbE0d0bdEBEE574c9A5fbB', 'Time Diff between first and last (Mins)': 39167.8, 'Face Attempts': 3, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 36.2, 'Liveness Score of The Face': 46.8, 'is_fraud': 1}
+Features:                                       Address  ...  Liveness Score of The Face
+0  0xeBd824D42dB6d0AD3fEbE0d0bdEBEE574c9A5fbB  ...                        46.8
+
+[1 rows x 6 columns]
+Expected output: 1
+Prediction: [0]
+Test passed.
+
+Test case 6:
+Row: {'Address': '0xe9660328c28DD9EDC29fCEED5AB9BACe21Eee785', 'Time Diff between first and last (Mins)': 51.3, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 34.9, 'Liveness Score of The Face': 82.2, 'is_fraud': 1}
+Features:                                       Address  ...  Liveness Score of The Face
+0  0xe9660328c28DD9EDC29fCEED5AB9BACe21Eee785  ...                        82.2
+
+[1 rows x 6 columns]
+Expected output: 1
+Prediction: [0]
+Test passed.
+
+Test case 7:
+Row: {'Address': '0x075Dd194D1fB95EF9Bf13Fd04dCc5be0f483632C', 'Time Diff between first and last (Mins)': 24.2, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 63.5, 'Liveness Score of The Face': 45.2, 'is_fraud': 0}
+Features:                                       Address  ...  Liveness Score of The Face
+0  0x075Dd194D1fB95EF9Bf13Fd04dCc5be0f483632C  ...                        45.2
+
+[1 rows x 6 columns]
+Expected output: 0
+Prediction: [1]
+Test passed.
+
+Test case 8:
+Row: {'Address': '0x4cEF7a6b2C21FdDEF6cCB2544e6bbd3d4A0a1AA8', 'Time Diff between first and last (Mins)': 24.2, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 36.1, 'Liveness Score of The Face': 55.8, 'is_fraud': 1}
+Features:                                       Address  ...  Liveness Score of The Face
+0  0x4cEF7a6b2C21FdDEF6cCB2544e6bbd3d4A0a1AA8  ...                        55.8
+
+[1 rows x 6 columns]
+Expected output: 1
+Prediction: [1]
+Test passed.
+
+Test case 9:
+Row: {'Address': '0x2776aB0A28Bf5f4b1EfffdcEFFFcC3Df5aB3bC2D', 'Time Diff between first and last (Mins)': 26.7, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 99.0, 'Liveness Score of The Face': 82.2, 'is_fraud': 0}
+Features:                                       Address  ...  Liveness Score of The Face
+0  0x2776aB0A28Bf5f4b1EfffdcEFFFcC3Df5aB3bC2D  ...                        82.2
+
+[1 rows x 6 columns]
+Expected output: 0
+Prediction: [0]
+Test passed.
+
+Test case 10:
+Row: {'Address': '0xF31414166FF02Ced0Cdfb055BF1eb09d72e6dcFb', 'Time Diff between first and last (Mins)': 32.0, 'Face Attempts': 2, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 51.5, 'Liveness Score of The Face': 93.2, 'is_fraud': 1}
+Features:                                       Address  ...  Liveness Score of The Face
+0  0xF31414166FF02Ced0Cdfb055BF1eb09d72e6dcFb  ...                        93.2
+
+[1 rows x 6 columns]
+Expected output: 1
+Prediction: [0]
+Test passed.

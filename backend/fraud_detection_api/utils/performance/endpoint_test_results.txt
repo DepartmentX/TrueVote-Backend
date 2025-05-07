@@ -1,0 +1,140 @@
+Test 1:
+Payload: {'Address': '0x697ff9e5b4cfa7340bd2a63b7f379f6c83f11419', 'Time Diff between first and last (Mins)': 52.509483721121725, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 57.59147179049804, 'Liveness Score of The Face': 54.03552759313631}
+Response: {'Address': '0x697ff9e5b4cfa7340bd2a63b7f379f6c83f11419', 'is_fraud': True}
+Elapsed Time: 0.025 sec
+Is Fraud: True
+Test Status: PASSED
+--------------------------------------------------
+Test 2:
+Payload: {'Address': '0xacfa941230f401821b446c6144bd1283d6907526', 'Time Diff between first and last (Mins)': 93.57166652064011, 'Face Attempts': 2, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 66.03953899486841, 'Liveness Score of The Face': 46.597124178376646}
+Response: {'Address': '0xacfa941230f401821b446c6144bd1283d6907526', 'is_fraud': True}
+Elapsed Time: 0.022 sec
+Is Fraud: True
+Test Status: PASSED
+--------------------------------------------------
+Test 3:
+Payload: {'Address': '0x6a6649f9178225a5d64b97e968ef954dcc09e32c', 'Time Diff between first and last (Mins)': 92.11995002176464, 'Face Attempts': 3, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 80.35908339570234, 'Liveness Score of The Face': 74.68197318427687}
+Response: {'Address': '0x6a6649f9178225a5d64b97e968ef954dcc09e32c', 'is_fraud': False}
+Elapsed Time: 0.023 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 4:
+Payload: {'Address': '0x65ec7a373a045042358dc6955e07c249ce4bd438', 'Time Diff between first and last (Mins)': 65.50304488984605, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 33.823593682561054, 'Liveness Score of The Face': 38.95549316393513}
+Response: {'Address': '0x65ec7a373a045042358dc6955e07c249ce4bd438', 'is_fraud': True}
+Elapsed Time: 0.021 sec
+Is Fraud: True
+Test Status: PASSED
+--------------------------------------------------
+Test 5:
+Payload: {'Address': '0xd2257b3cdc0d48dc17fc3b8247e8ae2ac53ab653', 'Time Diff between first and last (Mins)': 9.261517587605802, 'Face Attempts': 3, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 51.003644434738945, 'Liveness Score of The Face': 48.655434699221125}
+Response: {'Address': '0xd2257b3cdc0d48dc17fc3b8247e8ae2ac53ab653', 'is_fraud': True}
+Elapsed Time: 0.024 sec
+Is Fraud: True
+Test Status: PASSED
+--------------------------------------------------
+Test 6:
+Payload: {'Address': '0x4338f7b1598a285abe6f9f084ba514f9fc2d2d3c', 'Time Diff between first and last (Mins)': 81.31187165192998, 'Face Attempts': 3, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 36.379833508585286, 'Liveness Score of The Face': 43.14605431287893}
+Response: {'Address': '0x4338f7b1598a285abe6f9f084ba514f9fc2d2d3c', 'is_fraud': True}
+Elapsed Time: 0.023 sec
+Is Fraud: True
+Test Status: PASSED
+--------------------------------------------------
+Test 7:
+Payload: {'Address': '0x221a0f8943610182c219259e68f0e64fad706d7a', 'Time Diff between first and last (Mins)': 116.1691723872848, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 93.07593088172125, 'Liveness Score of The Face': 34.18320117473095}
+Response: {'Address': '0x221a0f8943610182c219259e68f0e64fad706d7a', 'is_fraud': True}
+Elapsed Time: 0.022 sec
+Is Fraud: True
+Test Status: PASSED
+--------------------------------------------------
+Test 8:
+Payload: {'Address': '0x5878969aac828eb05d36a98eff750f3194d84db6', 'Time Diff between first and last (Mins)': 97.81275884865181, 'Face Attempts': 2, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 42.416164418405145, 'Liveness Score of The Face': 91.14681591411721}
+Response: {'Address': '0x5878969aac828eb05d36a98eff750f3194d84db6', 'is_fraud': False}
+Elapsed Time: 0.023 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 9:
+Payload: {'Address': '0x361fceda4b5714a8973a859a484e18ff5ade97d2', 'Time Diff between first and last (Mins)': 119.1340672163803, 'Face Attempts': 2, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 89.80158127808551, 'Liveness Score of The Face': 34.08855467648432}
+Response: {'Address': '0x361fceda4b5714a8973a859a484e18ff5ade97d2', 'is_fraud': True}
+Elapsed Time: 0.023 sec
+Is Fraud: True
+Test Status: PASSED
+--------------------------------------------------
+Test 10:
+Payload: {'Address': '0xf423cb2edfcda48b38fbcca948939899f359523b', 'Time Diff between first and last (Mins)': 99.21756183276614, 'Face Attempts': 2, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 99.06200660728464, 'Liveness Score of The Face': 53.63564810604865}
+Response: {'Address': '0xf423cb2edfcda48b38fbcca948939899f359523b', 'is_fraud': False}
+Elapsed Time: 0.022 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 1:
+Payload: {'Address': '0xecf60764618f982433f7e387ae92704b7630f5e2', 'Time Diff between first and last (Mins)': 48.93223873938733, 'Face Attempts': 2, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 64.91832240645343, 'Liveness Score of The Face': 89.31623560137145}
+Response: {'Address': '0xecf60764618f982433f7e387ae92704b7630f5e2', 'is_fraud': False}
+Elapsed Time: 0.141 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 2:
+Payload: {'Address': '0x7c907e24a44b08748a4c5b748b68f4960e2c54a8', 'Time Diff between first and last (Mins)': 48.82900177657353, 'Face Attempts': 3, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 66.4930322013058, 'Liveness Score of The Face': 34.067504343901504}
+Response: {'Address': '0x7c907e24a44b08748a4c5b748b68f4960e2c54a8', 'is_fraud': True}
+Elapsed Time: 0.059 sec
+Is Fraud: True
+Test Status: PASSED
+--------------------------------------------------
+Test 3:
+Payload: {'Address': '0xbfd2537baf820e2ace848bbb8e4adf42c365711c', 'Time Diff between first and last (Mins)': 1.900732314521787, 'Face Attempts': 3, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 90.30290432978357, 'Liveness Score of The Face': 85.80940112387188}
+Response: {'Address': '0xbfd2537baf820e2ace848bbb8e4adf42c365711c', 'is_fraud': False}
+Elapsed Time: 0.032 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 4:
+Payload: {'Address': '0x743a84c443b87a9fd70a150802b96e7f97d15c80', 'Time Diff between first and last (Mins)': 117.91946633257045, 'Face Attempts': 3, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 48.92308466344503, 'Liveness Score of The Face': 82.14272002424175}
+Response: {'Address': '0x743a84c443b87a9fd70a150802b96e7f97d15c80', 'is_fraud': False}
+Elapsed Time: 0.025 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 5:
+Payload: {'Address': '0x0641e91cdeb0b35ce433e576ce866fabf9e5b5ab', 'Time Diff between first and last (Mins)': 91.20558749321368, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 97.27413891202295, 'Liveness Score of The Face': 65.51813156794219}
+Response: {'Address': '0x0641e91cdeb0b35ce433e576ce866fabf9e5b5ab', 'is_fraud': False}
+Elapsed Time: 0.023 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 6:
+Payload: {'Address': '0x872795bf04d64f4df77779532154411d14c7fc8a', 'Time Diff between first and last (Mins)': 105.23207454726693, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 30.293838913955533, 'Liveness Score of The Face': 95.6282648342428}
+Response: {'Address': '0x872795bf04d64f4df77779532154411d14c7fc8a', 'is_fraud': False}
+Elapsed Time: 0.024 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 7:
+Payload: {'Address': '0x9cc3a0b60a67862add4902e349ffb96ffe10fde3', 'Time Diff between first and last (Mins)': 45.136429902784464, 'Face Attempts': 3, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 60.43959236629881, 'Liveness Score of The Face': 91.10799579652642}
+Response: {'Address': '0x9cc3a0b60a67862add4902e349ffb96ffe10fde3', 'is_fraud': False}
+Elapsed Time: 0.023 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 8:
+Payload: {'Address': '0x9cb40d25f193187fd939b9923fb92ef094260ce9', 'Time Diff between first and last (Mins)': 107.33333599515714, 'Face Attempts': 3, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 90.5385608939194, 'Liveness Score of The Face': 73.73391978290152}
+Response: {'Address': '0x9cb40d25f193187fd939b9923fb92ef094260ce9', 'is_fraud': False}
+Elapsed Time: 0.022 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 9:
+Payload: {'Address': '0x0417f3230d7296971700c9b272df8dec7b623d11', 'Time Diff between first and last (Mins)': 16.52630644545612, 'Face Attempts': 1, 'Detected As a Robot At Least Once': 0, 'Face Match Percentage': 30.200304780325435, 'Liveness Score of The Face': 77.35398725899255}
+Response: {'Address': '0x0417f3230d7296971700c9b272df8dec7b623d11', 'is_fraud': False}
+Elapsed Time: 0.023 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
+Test 10:
+Payload: {'Address': '0x5034bac26f4a6fea2eafe5a992012bac013bfb92', 'Time Diff between first and last (Mins)': 4.497735049581526, 'Face Attempts': 2, 'Detected As a Robot At Least Once': 1, 'Face Match Percentage': 78.65558129418369, 'Liveness Score of The Face': 69.89221738422694}
+Response: {'Address': '0x5034bac26f4a6fea2eafe5a992012bac013bfb92', 'is_fraud': False}
+Elapsed Time: 0.023 sec
+Is Fraud: False
+Test Status: PASSED
+--------------------------------------------------
