@@ -35,7 +35,12 @@ function Home() {
     });
 
     const data = await response.json();
-    alert(data.success ? 'CAPTCHA verified!' : 'CAPTCHA failed!');
+    if (data.success) {
+      alert('CAPTCHA verified!');
+      window.location.href = '/validateVote'; // Navigate to validateVote.tsx
+    } else {
+      alert('CAPTCHA failed!');
+    }
   };
 
   return (

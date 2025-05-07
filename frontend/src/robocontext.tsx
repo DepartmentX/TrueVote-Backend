@@ -15,7 +15,7 @@ export const useRobot = () => {
   return context;
 };
 
-export const RobotProvider: React.FC = ({ children }) => {
+export const RobotProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const [isRobot, setIsRobot] = useState<number>(0);
 
   // Load isRobot value from localStorage on mount
