@@ -22,9 +22,9 @@ function ValidateVote() {
     const data: VoteData = {
       "Address": "0x3f5CE5FBFe3E9af3971dD833D26BA9b5C936f0bE",
       "Time Diff between first and last (Mins)": 12.0,
-      "Face Attempts": 3,
-      "Detected As a Robot At Least Once": 0,
-      "Face Match Percentage": 44.2,
+      "Face Attempts": 1,
+      "Detected As a Robot At Least Once": 1,
+      "Face Match Percentage": 74.2,
       "Liveness Score of The Face": 53.6,
     };
 

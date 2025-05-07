@@ -1,3 +1,6 @@
 _pycache_
 venv
 fraud_detection_api/api/__pycache__/
+fraud_detection_api/tests/__pycache__/
+fraud_detection_api/utils/scripts/__pycache__/
+fraud_detection_api/tests/.pytest_cache
