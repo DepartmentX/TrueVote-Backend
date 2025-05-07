@@ -13,3 +13,4 @@ catboost
 faker
 pytest
 requests
+dotenv
