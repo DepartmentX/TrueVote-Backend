@@ -1,11 +1,11 @@
-import './App.css'
-import ValidateVote from "./ValidateVote";
+import React from 'react';
+import { RobotProvider } from './robocontext';
+import Home from './home'
 
-function App() {
+const App = () => (
+  <RobotProvider>
+    <Home />
+  </RobotProvider>
+);
 
-  return (
-    <ValidateVote />
-  )
-}
-
-export default App
+export default App;
