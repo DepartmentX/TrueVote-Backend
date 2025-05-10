@@ -10,6 +10,8 @@ import boto3
 from dotenv import load_dotenv
 from botocore.exceptions import NoCredentialsError, BotoCoreError
 import face_recognition
+from app.utils.image_preprocess import preprocess_image_from_path
+from app.models.model import predict
 
 load_dotenv()
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
@@ -123,10 +125,16 @@ async def biometric_image_verify(
             if comparison_result['error']:
                 raise HTTPException(status_code=400, detail=comparison_result['error'])
 
+            check_spoofing_result = await check_spoofing(uploaded_temp_filename)
+
+            if check_spoofing_result['label'] == "Spoof":
+                raise HTTPException(status_code=400, detail="Spoofing detected")
+            
             return {
                 "wallet_address": wallet_address,
                 "is_match": comparison_result['is_match'],
-                "distance": comparison_result['distance']
+                "face_match_score": comparison_result['distance'],
+                "spoofing_score": check_spoofing_result['prediction'],
             }
 
         finally:
@@ -178,3 +186,10 @@ def compare_faces(img_path1, img_path2, threshold=0.6):
 
 async def get_user_by_wallet(db: Session, wallet_address: str) -> Optional[User]:
     return db.query(User).filter(User.wallet_address == wallet_address).first()
+
+
+
+async def check_spoofing(image_path: str) -> dict:
+    img_array = preprocess_image_from_path(image_path)
+    prediction, label = predict(img_array)
+    return {"prediction": float(prediction), "label": label}

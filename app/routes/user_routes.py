@@ -44,31 +44,6 @@ async def register(
 
     return user
 
-# @router.get("/wallet/{wallet_address}", response_model=UserResponse)
-# async def get_user_wallet(
-#     wallet_address: str,
-#     db: Session = Depends(get_db)
-# ):
-#     """
-#     Get user details by wallet address
-#     """
-#     user = await get_user_by_wallet(db, wallet_address)
-#     if not user:
-#         raise HTTPException(status_code=404, detail="User not found")
-#     return user
-
-# @router.get("/email/{email}", response_model=UserResponse)
-# async def get_user_email(
-#     email: str,
-#     db: Session = Depends(get_db)
-# ):
-#     """
-#     Get user details by email
-#     """
-#     user = await get_user_by_email(db, email)
-#     if not user:
-#         raise HTTPException(status_code=404, detail="User not found")
-#     return user 
 
 class LoginRequest(BaseModel):
     address: str
