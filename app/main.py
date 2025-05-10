@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routes.predict_route import router as predict_router
 from app.routes.user_routes import router as user_router
 from app.routes.verify_captcha import router as verify_captcha_router
 from app.routes.detect_fraud import router as detect_fraud_router
@@ -17,7 +16,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(predict_router)
 app.include_router(user_router)
 app.include_router(verify_captcha_router)
 app.include_router(detect_fraud_router)
